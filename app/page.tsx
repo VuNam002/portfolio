@@ -22,6 +22,7 @@ const T = {
   vi: {
     nav: ["Về tôi", "Sở thích", "Kỹ năng", "Kinh nghiệm", "Dự án", "Liên hệ"],
     navContact: "Liên hệ",
+    navResume: "Sơ yếu lý lịch",
 
     heroGreeting: "Xin chào, tôi là",
     heroDesc:
@@ -96,6 +97,7 @@ const T = {
   en: {
     nav: ["About", "Hobbies", "Skills", "Experience", "Projects", "Contact"],
     navContact: "Contact",
+    navResume: "Resume",
 
     heroGreeting: "Hi, I'm",
     heroDesc:
@@ -755,8 +757,16 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="hidden md:flex items-center gap-3">
+            <div className="hidden md:flex items-center gap-4">
               <LangToggle />
+              <a
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+                className="px-4 py-1.5 text-sm font-medium tracking-wider rounded-md bg-blue-600/10 text-blue-400 hover:bg-blue-600/20 transition-colors border border-blue-500/20"
+              >
+                {t.navResume}
+              </a>
             </div>
 
             <button
@@ -813,8 +823,16 @@ export default function Home() {
                   {navLabels[i]}
                 </button>
               ))}
-              <div className="flex items-center gap-3 mt-1">
+              <div className="flex items-center gap-4 mt-2 pt-4 border-t border-white/10">
                 <LangToggle />
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="px-4 py-1.5 text-sm font-medium tracking-wider rounded-md bg-blue-600/10 text-blue-400 hover:bg-blue-600/20 transition-colors border border-blue-500/20"
+                >
+                  {t.navResume}
+                </a>
               </div>
             </div>
           </div>
