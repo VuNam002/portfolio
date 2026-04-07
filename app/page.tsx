@@ -760,7 +760,7 @@ export default function Home() {
             <div className="hidden md:flex items-center gap-4">
               <LangToggle />
               <a
-                href="#"
+                href="https://drive.google.com/file/d/16e61vQOS1vEs1RwYwzlJi3GDFdsdCdDf/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
                 className="px-4 py-1.5 text-sm font-medium tracking-wider rounded-md bg-blue-600/10 text-blue-400 hover:bg-blue-600/20 transition-colors border border-blue-500/20"
