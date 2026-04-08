@@ -20,7 +20,7 @@ const useLang = () => useContext(LangContext);
 
 const T = {
   vi: {
-    nav: ["Về tôi", "Sở thích", "Kỹ năng", "Kinh nghiệm", "Dự án", "Liên hệ"],
+    nav: ["Về tôi", "Sở thích", "Kỹ năng", "Kinh nghiệm", "Dự án", "Demo", "Liên hệ"],
     navContact: "Liên hệ",
     navResume: "Sơ yếu lý lịch",
 
@@ -30,7 +30,7 @@ const T = {
     heroViewProjects: "Xem dự án →",
     heroGithub: "GitHub của tôi",
     phrases: [
-      "Lập trình viên Full-Stack",
+      "Lập trình viên phát triển phần mềm",
       "Nghiên cứu AI & Computer Vision",
       "Chuyên ngành: Toán - Tin",
     ],
@@ -86,6 +86,11 @@ const T = {
     projSubtitle: "Một số sản phẩm tiêu biểu tôi đã nghiên cứu và phát triển.",
     projGithub: "Xem trên GitHub",
 
+    demoTitle1: "Video",
+    demoTitle2: "Demo",
+    demoDesc: "Xem thêm các video trình diễn chi tiết về tính năng và luồng hoạt động của các dự án tôi đã phát triển.",
+    demoBtn: "Ghé thăm kênh YouTube",
+
     contactTitle1: "Hãy",
     contactTitle2: "kết nối",
     contactDesc:
@@ -95,7 +100,7 @@ const T = {
   },
 
   en: {
-    nav: ["About", "Hobbies", "Skills", "Experience", "Projects", "Contact"],
+    nav: ["About", "Hobbies", "Skills", "Experience", "Projects", "Demo", "Contact"],
     navContact: "Contact",
     navResume: "Resume",
 
@@ -105,7 +110,7 @@ const T = {
     heroViewProjects: "View projects →",
     heroGithub: "My GitHub",
     phrases: [
-      "Full-Stack Developer",
+      "Software Engineer",
       "AI & Computer Vision Researcher",
       "Major: Math - CS",
     ],
@@ -162,6 +167,11 @@ const T = {
     projSubtitle: "Some notable products I have researched and developed.",
     projGithub: "View on GitHub",
 
+    demoTitle1: "Video",
+    demoTitle2: "Demo",
+    demoDesc: "Watch more demonstration videos detailing the features and workflows of the projects I have developed.",
+    demoBtn: "Visit my YouTube channel",
+
     contactTitle1: "Let's",
     contactTitle2: "connect",
     contactDesc:
@@ -177,6 +187,7 @@ const NAV_IDS = [
   "skills",
   "experience",
   "projects",
+  "demo",
   "contact",
 ];
 
@@ -1126,7 +1137,74 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="contact" className="py-28 px-6 bg-zinc-950/50">
+      <section id="demo" className="py-28 px-6 bg-zinc-950/50">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2
+            className="text-4xl md:text-5xl font-medium mb-6"
+            style={{ fontFamily: "var(--font-playfair), serif" }}
+          >
+            {t.demoTitle1}{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-rose-600">
+              {t.demoTitle2}
+            </span>
+          </h2>
+          <p className="text-zinc-400 mb-16 max-w-xl mx-auto leading-relaxed">
+            {t.demoDesc}
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <GlowCard glowColor="#ef4444" className="p-4 flex flex-col">
+              <div className="aspect-video w-full rounded-xl overflow-hidden bg-black border border-zinc-800">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/mXJyU4Di8zk"
+                  title="YouTube video player 1"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="border-none"
+                ></iframe>
+              </div>
+              <h3 className="text-xl font-semibold text-white mt-5 text-left" style={{ fontFamily: "var(--font-playfair), serif" }}>
+                AI Giám sát an toàn & PPE
+              </h3>
+            </GlowCard>
+
+            <GlowCard glowColor="#3b82f6" className="p-4 flex flex-col">
+              <div className="aspect-video w-full rounded-xl overflow-hidden bg-black border border-zinc-800">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/rqRkX1g0LsY"
+                  title="YouTube video player 2"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="border-none"
+                ></iframe>
+              </div>
+              <h3 className="text-xl font-semibold text-white mt-5 text-left" style={{ fontFamily: "var(--font-playfair), serif" }}>
+                Owen
+              </h3>
+            </GlowCard>
+          </div>
+
+          <div className="mt-12">
+            <a
+              href="https://www.youtube.com/@namvu-o9b"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-red-600/10 text-red-400 hover:bg-red-600/20 transition-colors border border-red-500/20 tracking-wide font-medium"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+              {t.demoBtn}
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="py-28 px-6">
             <div className="max-w-2xl mx-auto text-center">
               <h2
                 className="text-4xl md:text-5xl font-medium mb-6"
